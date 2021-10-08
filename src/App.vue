@@ -1,15 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img src="./assets/transistor-delivery.png" />
+  <urlShortenerApp />
+  <Footer />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import urlShortenerApp from './components/UrlShortener.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    urlShortenerApp,
+    Footer
   }
 }
 </script>
@@ -23,4 +26,14 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+body {
+  background-color: #FEFBE9;
+}
+
+img {
+  height: 30%;
+  width: 30%;
+}
 </style>
+

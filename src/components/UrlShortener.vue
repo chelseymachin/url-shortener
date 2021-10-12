@@ -1,8 +1,8 @@
 <template>
   <div>
     <div id="inputContainer">
-      <input type="text" placeholder="Paste your URL here" ref="input" @focus="resetInput"/>
-      <button @click='click'>
+      <input type="text" placeholder="Paste your URL here" ref="input" @focus="resetInput" @keydown.enter='click' />
+      <button @click='click' @keydown.enter='click'>
         Shorten It!
       </button>
     </div>
@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     click() {
-      if (this.input.value.length != 0) {
+      if ((this.input.value.length != 0) && (this.isValidUrl(this.input.value))) {
         this.originalUrl = this.input.value;
         this.resetInput();
 
@@ -58,12 +58,18 @@ export default {
         })
       } else {
         window.alert("Please enter a URL in need of shortening!");
+        this.resetInput();
       }
       
     },
     resetInput () {
       this.input.value = "";
-    }
+    },
+    isValidUrl (url) {
+      var a = document.createElement('a');
+      a.href = url;
+      return (a.host && a.host != window.location.host)
+}
   }
 }
 </script>

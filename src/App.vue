@@ -1,18 +1,18 @@
 <template>
   <img src="./assets/transistor-delivery.png" />
   <urlShortenerApp />
-  <Footer />
+  <Credits />
 </template>
 
 <script>
 import urlShortenerApp from './components/UrlShortener.vue'
-import Footer from './components/Footer.vue'
+import Credits from './components/Credits.vue'
 
 export default {
   name: 'App',
   components: {
     urlShortenerApp,
-    Footer
+    Credits
   }
 }
 </script>

@@ -34,16 +34,22 @@ export default {
   img {
     height: 30%;
     width: 30%;
+    display: block;
+    margin: 0 auto;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     img {
-      display: block;
-      margin: 0 auto;
       height: 75%;
       width: 75%;
     }
+  }
 
+  @media only screen and (max-width: 500px) {
+    img {
+      height: 75%;
+      width: 75%;
+    }
   }
 </style>
 

@@ -74,6 +74,7 @@ export default {
 #inputContainer {
   display: flex;
   justify-content: center;
+  align-content: center;
   width: 100%;
   height: auto;
 }
@@ -108,4 +109,20 @@ textarea {
 #resultsContainer {
   margin-top: 20px;
 }
+
+@media only screen and (max-width: 500px) {
+    #inputContainer {
+      flex-flow: column;
+      align-items: center;
+    }
+
+    input {
+      margin: 1rem;
+      width: 80%;
+    }
+
+    textarea {
+      width: 90%;
+    }
+  }
 </style>

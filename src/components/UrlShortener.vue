@@ -57,7 +57,7 @@ export default {
           this.shortenedUrl = data.link;
         })
       } else {
-        window.alert("Please enter a URL in need of shortening!");
+        window.alert("Please enter a URL in need of shortening!  Make sure it has the format 'https://' and is a valid URL");
         this.resetInput();
       }
       
